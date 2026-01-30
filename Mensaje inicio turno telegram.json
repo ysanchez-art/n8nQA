@@ -1,0 +1,91 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "chatId": "7867904883",
+        "text": "=<b><i>¡OJO!</i></b> \n\n<b><i>Realizar Reporte Diario Jornada Laboral</i></b>\n\nhttps://form.asana.com/?k=WGw15u-lXbBnkEa_Dw0pAQ&d=1204083449956184\n\n",
+        "replyMarkup": "=none",
+        "forceReply": {},
+        "replyKeyboardOptions": {},
+        "replyKeyboardRemove": {},
+        "additionalFields": {
+          "appendAttribution": false,
+          "disable_notification": true,
+          "disable_web_page_preview": false,
+          "parse_mode": "HTML",
+          "reply_to_message_id": 0,
+          "message_thread_id": 0
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -576,
+        -16
+      ],
+      "id": "ad8a3260-9988-442d-a9fd-9bcd289dceda",
+      "name": "Send a text message",
+      "webhookId": "f3c7816c-43e5-4082-8676-b9330542905a",
+      "credentials": {
+        "telegramApi": {
+          "id": "yqvm1SyyI31Axg36",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "triggerAtHour": 6,
+              "triggerAtMinute": 20
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        -752,
+        -16
+      ],
+      "id": "340ee486-0e3b-4d95-b10e-6eb8710240ab",
+      "name": "Schedule Trigger"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "5a54873c-89b8-4bea-a3cc-58c8d5d1cc5a",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "ad24f106bff4ead115d4b4d2c4d7e2eb1b34dc402b59af8b7b3fefc78efe3da7"
+  },
+  "id": "34z9oz3YGPwvzJ5c",
+  "tags": []
+}
