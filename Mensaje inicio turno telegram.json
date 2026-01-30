@@ -3,8 +3,8 @@
   "nodes": [
     {
       "parameters": {
-        "chatId": "7867904883",
-        "text": "=<b><i>¡OJO!</i></b> \n\n<b><i>Realizar Reporte Diario Jornada Laboral</i></b>\n\nhttps://form.asana.com/?k=WGw15u-lXbBnkEa_Dw0pAQ&d=1204083449956184\n\n",
+        "chatId": "7867904883,7237174388,1547297287",
+        "text": "=💀🚨💀 ¡OJO! Realizar Reporte Diario Jornada Laboral 💀🚨💀https://form.asana.com/?k=WGw15u-lXbBnkEa_Dw0pAQ&d=1204083449956184\n\n",
         "replyMarkup": "=none",
         "forceReply": {},
         "replyKeyboardOptions": {},
@@ -61,6 +61,29 @@
       ],
       "id": "340ee486-0e3b-4d95-b10e-6eb8710240ab",
       "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "sendTo": "yesid.sanchez@copservir.co",
+        "subject": "={{ $json.result.text }}",
+        "message": "💀🚨💀 ¡OJO! Realizar Reporte Diario Jornada Laboral 💀🚨💀https://form.asana.com/?k=WGw15u-lXbBnkEa_Dw0pAQ&d=1204083449956184",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -368,
+        -16
+      ],
+      "id": "4d91ef45-a93b-4d2f-b53a-712ece439bae",
+      "name": "Send a message",
+      "webhookId": "48db348c-e9b0-4cbe-a0c8-398ebaf1bec2",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "LedIrOj91S8vWtVS",
+          "name": "Gmail account"
+        }
+      }
     }
   ],
   "pinData": {},
@@ -75,13 +98,24 @@
           }
         ]
       ]
+    },
+    "Send a text message": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": true,
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "5a54873c-89b8-4bea-a3cc-58c8d5d1cc5a",
+  "versionId": "79824139-96f1-4c3c-a2fa-ae379df1a828",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "ad24f106bff4ead115d4b4d2c4d7e2eb1b34dc402b59af8b7b3fefc78efe3da7"
